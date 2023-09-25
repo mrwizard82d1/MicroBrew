@@ -6,5 +6,6 @@ A veritable witches brew of things I'm interested in.
 
 | Directory | Descriptions |
 | --- | --- |
-| typescript | Learnings about TypeScript | 
+| dynamic_data | Learning about DynamicData | 
+| typescript | Learning about TypeScript | 
 
