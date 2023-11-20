@@ -13,6 +13,8 @@
             <!-- Notice that one need not specify the units (unlike `WinForms`). -->
             <!-- Columns with `Auto` width grow and shrink to fit content. -->
             <!-- The column with a width of `*` consumes all "remaining" horizontal space. -->
+            <!-- One can specify *multiple* `*` columns. The layout manager will then divide the remaining space -->
+            <!-- equally to each column with an all consuming, `*`, width. -->
             <ColumnDefinition Width="20" />
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="Auto" />
@@ -21,13 +23,21 @@
             <ColumnDefinition Width="20" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <!-- Again, Tim Corey's practice is to add a few more rows than columns -->
+            <!-- A horizontal layout may be more useful allowing one to see both the designed UI and many rows -->
+            <!-- of XAML -->
             <RowDefinition Height="20" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="1" Grid.Column="1" Background="Red" Text="Foo" />
-        <TextBlock Grid.Row="1" Grid.Column="2" Background="Blue" Text="Bar" />
-        <TextBlock Grid.Row="1" Grid.Column="3" Background="Green" Text="Baz" />
-        <TextBlock Grid.Row="1" Grid.Column="4" Background="Cyan" Text="Quux" />
+        <TextBlock Grid.Row="2" Grid.Column="2" Background="Blue" Text="Bar" />
+        <TextBlock Grid.Row="3" Grid.Column="3" Background="Green" Text="Baz" />
+        <TextBlock Grid.Row="4" Grid.Column="4" Background="Cyan" Text="Quux" />
     </Grid>
 </Window>
