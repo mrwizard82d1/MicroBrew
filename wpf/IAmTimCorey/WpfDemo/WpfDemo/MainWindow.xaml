@@ -7,6 +7,27 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <!-- Tim Corey's practice is to "surround" the grid with two boundary rows and two boundary columns. -->
+            <!-- The boundary columns have a width of 20px; similarly, the boundary rows also have a height of 20px. -->
+            <!-- Notice that one need not specify the units (unlike `WinForms`). -->
+            <!-- Columns with `Auto` width grow and shrink to fit content. -->
+            <!-- The column with a width of `*` consumes all "remaining" horizontal space. -->
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="1" Grid.Column="1" Background="Red" Text="Foo" />
+        <TextBlock Grid.Row="1" Grid.Column="2" Background="Blue" Text="Bar" />
+        <TextBlock Grid.Row="1" Grid.Column="3" Background="Green" Text="Baz" />
+        <TextBlock Grid.Row="1" Grid.Column="4" Background="Cyan" Text="Quux" />
     </Grid>
 </Window>
