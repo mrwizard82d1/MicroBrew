@@ -37,8 +37,8 @@
         </Grid.RowDefinitions>
         <!-- Tim Corey's practice is to *never* put anything in grid 0, row 0, grid last or row last. -->
         <TextBlock Grid.Column="1"
-                   Grid.Row="1">
-            Hello TextBlock World!
-        </TextBlock>
+                   Grid.Row="1"
+                   FontSize="36"
+                   Text="Hi, TextBlock World!" />
     </Grid>
 </Window>
