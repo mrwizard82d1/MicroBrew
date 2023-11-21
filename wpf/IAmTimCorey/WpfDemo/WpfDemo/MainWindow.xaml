@@ -35,9 +35,10 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="1" Grid.Column="1" Background="Red" Text="Foo" />
-        <TextBlock Grid.Row="2" Grid.Column="2" Background="Blue" Text="Bar" />
-        <TextBlock Grid.Row="3" Grid.Column="3" Background="Green" Text="Baz" />
-        <TextBlock Grid.Row="4" Grid.Column="4" Background="Cyan" Text="Quux" />
+        <!-- Tim Corey's practice is to *never* put anything in grid 0, row 0, grid last or row last. -->
+        <TextBlock Grid.Column="1"
+                   Grid.Row="1">
+            Hello TextBlock World!
+        </TextBlock>
     </Grid>
 </Window>
