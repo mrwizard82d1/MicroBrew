@@ -43,6 +43,7 @@
         <!-- Tim Corey's practice is to *never* put anything in grid 0, row 0, grid last or row last. -->
         <TextBlock Grid.Column="1"
                    Grid.Row="1"
+                   Grid.ColumnSpan="3"
                    FontSize="36"
                    Text="WPF Super Demo" />
         <TextBlock Grid.Column="1"
