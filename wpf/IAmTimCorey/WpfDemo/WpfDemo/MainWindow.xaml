@@ -46,7 +46,7 @@
                    Grid.ColumnSpan="3"
                    FontSize="36"
                    Text="WPF Super Demo" 
-                   Margin="20"/>
+                   Margin="20,0"/>
         <TextBlock Grid.Column="1"
                    Grid.Row="2"
                    FontFamily="Segoe UI"
