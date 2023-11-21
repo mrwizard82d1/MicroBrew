@@ -55,5 +55,24 @@
                  Grid.Row="2"
                  x:Name="FirstNameText" 
                  Width="150"/>
+        <!-- A `Button` supports both a `Content` property (for "simple" content?) -->
+        <!-- But one can also specify child controls; for example, some text and an image, as the child of the -->
+        <!-- button. This nesting is part of what gives WPF its flexibility. -->
+        <!-- A `Button` takes up all available space. Setting it to span two columns "stretches" the button. -->
+        <!-- Without specifying `Margin`, the button abuts against the row above. Specifying a `Margin` of 10 -->
+        <!-- shrinks the button itself, but provides a separation between the rows both above and below... -->
+        <!-- ...and, similarly, separates it from the left and right "cells" by 10 pixels. -->
+        <!-- FYI. Currently, clicking the button will do **nothing** other than the default click behavior. -->
+        <!-- By naming the button, `SubmitButton`, Rider/Visual Studio will provide a more meaningful name. -->
+        <!-- Specifically, it offers to name the callback, `SubmitButton_OnClick`. If we had **not** named -->
+        <!-- the button, the default offered name would have been something like `Button_OnClick.` One could -->
+        <!-- probably use this default name, but `SubmitButton_OnClick` communicates a bit more about intent. -->
+        <Button x:Name="SubmitButton" 
+                Grid.Column="1"
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                Margin="10"
+                Content="Run Me" 
+                Click="SubmitButton_OnClick"/>
     </Grid>
 </Window>

@@ -24,5 +24,10 @@ namespace WpfDemo
         {
             InitializeComponent();
         }
+
+        private void SubmitButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"Thanks for de-pressing me, {FirstNameText.Text}. (Cue the Bob Hope music.)");
+        }
     }
 }
