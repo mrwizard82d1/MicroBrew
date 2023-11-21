@@ -1,11 +1,16 @@
-﻿<Window x:Class="WpfDemo.MainWindow"
+﻿<!-- Starting height and width only -->
+<!-- Set default font size and font family. Used only if not specified later-->
+<Window x:Class="WpfDemo.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfDemo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Our WPF Demo"
+        FontSize="18" 
+        FontFamily="Segoe UI Light"
+        Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <!-- Tim Corey's practice is to "surround" the grid with two boundary rows and two boundary columns. -->
@@ -39,6 +44,6 @@
         <TextBlock Grid.Column="1"
                    Grid.Row="1"
                    FontSize="36"
-                   Text="Hi, TextBlock World!" />
+                   Text="WPF Super Demo" />
     </Grid>
 </Window>
