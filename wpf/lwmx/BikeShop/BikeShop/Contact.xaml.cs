@@ -1,8 +1,6 @@
-﻿using System.Windows.Controls;
+﻿namespace BikeShop;
 
-namespace BikeShop;
-
-public partial class Contact : UserControl
+public partial class Contact 
 {
     public Contact()
     {
