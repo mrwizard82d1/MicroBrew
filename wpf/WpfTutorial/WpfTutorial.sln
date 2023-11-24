@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWpf", "HelloWpf\HelloW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloXaml", "HelloXaml\HelloXaml.csproj", "{BE52F4BB-4BC5-46DA-BA30-FCCF59EBA2A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xaml.EventsSample", "Xaml.EventsSample\Xaml.EventsSample.csproj", "{9ECBE58B-7C0F-48FB-A1C7-249C5E43689C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{BE52F4BB-4BC5-46DA-BA30-FCCF59EBA2A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE52F4BB-4BC5-46DA-BA30-FCCF59EBA2A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE52F4BB-4BC5-46DA-BA30-FCCF59EBA2A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ECBE58B-7C0F-48FB-A1C7-249C5E43689C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ECBE58B-7C0F-48FB-A1C7-249C5E43689C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ECBE58B-7C0F-48FB-A1C7-249C5E43689C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ECBE58B-7C0F-48FB-A1C7-249C5E43689C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
