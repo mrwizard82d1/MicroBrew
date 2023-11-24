@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWpf", "HelloWpf\HelloWpf.csproj", "{EF86D890-C36E-4CD9-9CBF-9858E7ECE899}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloXaml", "HelloXaml\HelloXaml.csproj", "{BE52F4BB-4BC5-46DA-BA30-FCCF59EBA2A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{EF86D890-C36E-4CD9-9CBF-9858E7ECE899}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF86D890-C36E-4CD9-9CBF-9858E7ECE899}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF86D890-C36E-4CD9-9CBF-9858E7ECE899}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE52F4BB-4BC5-46DA-BA30-FCCF59EBA2A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE52F4BB-4BC5-46DA-BA30-FCCF59EBA2A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE52F4BB-4BC5-46DA-BA30-FCCF59EBA2A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE52F4BB-4BC5-46DA-BA30-FCCF59EBA2A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
