@@ -1,0 +1,33 @@
+﻿<Window x:Class="ResourcesInCodeBehind.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ResourcesInCodeBehind"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="175" Width="250">
+    <Window.Resources>
+        <sys:String x:Key="StringWindow">
+            Hello, Window World!
+        </sys:String>
+    </Window.Resources>
+    <DockPanel Margin="10"
+               Name="PanelMain">
+        <DockPanel.Resources>
+            <sys:String x:Key="StringPanel">
+                Hello, Panel World!
+            </sys:String>
+        </DockPanel.Resources>
+        <WrapPanel DockPanel.Dock="Top"
+                   HorizontalAlignment="Center"
+                   Margin="10">
+            <Button Name="ButtonClickMe"
+                    Click="ButtonClickMe_Click">
+                Click me!
+            </Button>
+            
+            <ListBox  Name="ListBoxResult" />
+        </WrapPanel>
+    </DockPanel>
+</Window>
