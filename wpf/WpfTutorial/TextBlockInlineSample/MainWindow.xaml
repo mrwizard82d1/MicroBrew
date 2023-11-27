@@ -1,0 +1,19 @@
+﻿<Window x:Class="TextBlockInlineSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TextBlockInlineSample"
+        mc:Ignorable="d"
+        Title="TextBlockInlineSample" Height="100" Width="300">
+    <Grid>
+        <TextBlock Margin="10"
+                   TextWrapping="Wrap">
+            <!-- An example of inline formatting. -->
+            <!-- Note that the Rider renderer **does not** correctly handle the surrounding white space. -->
+            <!-- However, it is rendered correctly by Windows itself when run. -->
+            <!-- Internally these three tags are children of the `Span` tag that set specific properties. -->
+            TextBlock with <Bold>bold</Bold>, <Italic>italic</Italic>, and <Underline>underlined</Underline> text.
+        </TextBlock>
+    </Grid>
+</Window>
