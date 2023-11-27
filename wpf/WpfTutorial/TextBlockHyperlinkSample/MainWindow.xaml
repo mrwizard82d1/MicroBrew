@@ -1,0 +1,27 @@
+﻿<Window x:Class="TextBlockHyperlinkSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TextBlockHyperlinkSample"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="150" Width="300">
+    <StackPanel>
+        <!-- This example illustrates using the `Hyperlink` element; however, it raises an exception when one clicks -->
+        <!-- on the link. The basic error message is: -->
+        <!-- """Unhandled exception. System.ComponentModel.Win32Exception (2): An error occurred trying to start -->
+        <!-- process 'https://www.google.com/' with working directory -->
+        <!-- 'C:\Users\jones\professional\projects\MicroBrew\wpf\WpfTutorial\TextBlockHyperlinkSample\bin\Debug\net7.0-windows'. -->
+        <!-- The system cannot find the file specified.""" -->
+        <!-- Although I could debug the issue, I chose not to. -->
+        <TextBlock Margin="10"
+                   TextWrapping="Wrap">
+            This text has a <Hyperlink RequestNavigate="Hyperlink_OnRequestNavigate" 
+                                       NavigateUri="https://www.google.com">link</Hyperlink> in it. 
+        </TextBlock>
+        <TextBlock Margin="10"
+                   TextWrapping="Wrap">
+            Unfortunately, clicking on the link raises an unhandled exception that I have chosen not to diagnose.
+        </TextBlock>
+    </StackPanel>
+</Window>
