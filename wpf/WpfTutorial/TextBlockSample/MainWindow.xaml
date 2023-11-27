@@ -5,8 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TextBlockSample"
         mc:Ignorable="d"
-        Title="TextBlockSample" Height="100" Width="300">
-    <TextBlock>
-        This is a TextBlock control with very long text that does not fit in the size provided.
-    </TextBlock>
+        Title="TextBlockSample" Height="200" Width="250">
+    <StackPanel>
+        <!-- Insert a `<LinkBreak/>` element to force a break in text. -->
+        <!-- This choice gives the developer absolute control over wrapping, but it is not very flexible. -->
+        <TextBlock Margin="10"
+                   Foreground="Red">
+            This is a TextBlock control<LineBreak/>
+            with very multiple lines of text.
+        </TextBlock>
+        
+        <!-- One can also configure the `TextBlock` to use ellipses. -->
+        <!-- Using the ellipsis properties, `CharacterEllipsis` or `WordEllipsis`, is useful technique when one -->
+        <!-- has limited space. The property value, "WordEllipsis" only presents whole words. -->
+        <TextBlock Margin="10"
+                   Foreground="Green"
+                   TextTrimming="CharacterEllipsis">
+            This is a TextBlock control with text that may not be rendered completely, but any "extra" text will be 
+            indicated by ellipses.
+        </TextBlock>
+        
+        <!-- One can also configure the `TextBlock` to use wrap "too long" text. -->
+        <!-- This technique supports automatic wrapping of text. -->
+        <!-- Additionally, and in contrast to `LineBreak`, if one resizes the control, the control itself will -->
+        <!-- re-wrap the text into the available space. -->
+        <TextBlock Margin="10"
+                   Foreground="Blue"
+                   TextWrapping="Wrap">
+            This is a TextBlock control with automatically wrapped text using the `TextWrapping` property.
+        </TextBlock>
+    </StackPanel>
 </Window>
