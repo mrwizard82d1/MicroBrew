@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="TextBlockSample" Height="100" Width="300">
     <TextBlock>
-        This is a TextBlock
+        This is a TextBlock control with very long text that does not fit in the size provided.
     </TextBlock>
 </Window>
