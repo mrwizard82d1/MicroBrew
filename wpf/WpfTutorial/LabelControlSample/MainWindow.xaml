@@ -5,12 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LabelControlSample"
         mc:Ignorable="d"
-        Title="LabelControlSample" Height="100" Width="300">
-    <Grid>
-        <!-- In contrast with a `TextBlock`, a `Label` is "optimized"; specifically, the content is already padded -->
-        <!-- so that, unlike the `TextBlock`, it does **not** abut with the bounding control. -->
-        <!-- In a simple case like this where the content is simply the string, the `Label` actually creates an -->
-        <!-- internal `TextBlock` and shows the string inside that `TextBlock`. -->
-        <Label Content="This is a Label control." />
-    </Grid>
+        Title="LabelControlSample" Height="180" Width="250">
+    <StackPanel Margin="10">
+        <!-- Prepending any character in the `Content` by an underscore ('_') causes Windows to recognize -->
+        <!-- the key **following** the underscore as the shortcut character to the target control; -->
+        <!-- that is, pressing the key combination Alt-<shortcut character> will navigate to the control -->
+        <!-- specified in the `Target` property. -->
+        <!-- Although this example uses the first character of the label text, it can actually be any character -->
+        <!-- in the `Label`. Common practice is to use the first character not already assigned as a shortcut -->
+        <!-- to another control. -->
+        <!-- Note that `ElementName` binding specifies the `Name` of the target control. -->
+        <!-- Although the text states that if one renames the target control, one will need to (manually) change -->
+        <!-- the control name assigned to `ElementName`; however, I think that many refactoring tools will -->
+        <!-- detect this change and at least offer to change it "automagically". -->
+        <Label Content="_Name:"
+               Target="{Binding ElementName=TextName}" />
+        <TextBox Name="TextName" />
+        
+        <Label Content="_Menu:"
+               Target="{Binding ElementName=TextMail}" />
+        <TextBox Name="TextMail" />
+    </StackPanel>
 </Window>
