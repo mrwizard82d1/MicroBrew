@@ -1,0 +1,20 @@
+﻿<Window x:Class="TextBoxSelectionSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="TextBoxSelectionSample" Height="150" Width="300">
+    <DockPanel Margin="10">
+        <!-- This example contains two `TextBox` controls. The first allows one to enter and edit text. -->
+        <!-- The second `TextBox` is read only and displays information about the "selection". -->
+        <!-- Note that even if no text is selected, the selection is at the edit cursor and may be empty. -->
+        <!-- Finally, note that we handle populating the second text back in the `SelectionChange` callback. -->
+        <TextBox SelectionChanged="TextBoxBase_OnSelectionChanged"
+                 DockPanel.Dock="Top"/>
+        <TextBox Name="TextStatus"
+                 AcceptsReturn="True"
+                 TextWrapping="Wrap"
+                 IsReadOnly="True"/>
+    </DockPanel>
+</Window>
