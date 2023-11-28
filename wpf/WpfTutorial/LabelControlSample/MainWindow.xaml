@@ -1,0 +1,16 @@
+﻿<Window x:Class="LabelControlSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LabelControlSample"
+        mc:Ignorable="d"
+        Title="LabelControlSample" Height="100" Width="300">
+    <Grid>
+        <!-- In contrast with a `TextBlock`, a `Label` is "optimized"; specifically, the content is already padded -->
+        <!-- so that, unlike the `TextBlock`, it does **not** abut with the bounding control. -->
+        <!-- In a simple case like this where the content is simply the string, the `Label` actually creates an -->
+        <!-- internal `TextBlock` and shows the string inside that `TextBlock`. -->
+        <Label Content="This is a Label control." />
+    </Grid>
+</Window>
