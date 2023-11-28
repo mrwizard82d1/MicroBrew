@@ -5,11 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="TextBoxSample" Height="160" Width="280">
-    <!-- I believe a `Grid` allows a single child to consume all available space, whereas a `StackPanel` would not. -->
     <Grid Margin="10">
-        <!-- Setting the `AcceptsReturn` to `True` allows the control to include newline characters. -->
-        <!-- Setting the `TextWrapping` to `True` allows the control to wrap text at the "end of line". -->
+        <!-- This example extends the previous code adding two additional properties to the `TextBox`. -->
+        <!-- The attached property, `SpellCheck.IsEnabled`, enables spell checking. -->
+        <!-- The property, `Language`, enables spell checking for a specific language (US English). -->
+        <!-- Other supported languages are French, German and Spanish. -->
         <TextBox AcceptsReturn="True"
-                 TextWrapping="Wrap"/>
+                 TextWrapping="Wrap"
+                 SpellCheck.IsEnabled="True"
+                 Language="en-US"/>
     </Grid>
 </Window>
