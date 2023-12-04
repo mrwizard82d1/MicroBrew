@@ -1,0 +1,20 @@
+﻿<Window x:Class="HelloBoundWorldSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="HelloBoundWorldSample" Height="110" Width="280">
+    <StackPanel Margin="10">
+        <TextBox Name="TextValue" />
+        <WrapPanel Margin="0, 10">
+           <TextBlock Text="Value: "
+                      FontWeight="Bold"/> 
+           <!-- The `Binding` in the following element binds the `Text` property of the `TextValue` element -->
+           <!-- (defined previously - see line 9) to the `Text` property of **this** `TextBlock`. Consequently, -->
+           <!-- whenever one types a character in the `TextBox` named `TextValue`, it is **also** displayed -->
+           <!-- in **the following** `TextBlock`. -->
+           <TextBlock Text="{Binding Path=Text, ElementName=TextValue}"/>
+        </WrapPanel>
+    </StackPanel>
+</Window>
