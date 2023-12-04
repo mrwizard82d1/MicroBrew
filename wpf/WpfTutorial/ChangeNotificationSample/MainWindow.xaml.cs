@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections.ObjectModel;
 using System.Windows;
 
 namespace ChangeNotificationSample
@@ -8,7 +8,7 @@ namespace ChangeNotificationSample
     /// </summary>
     public partial class MainWindow
     {
-        private List<User> _users = new();
+        private ObservableCollection<User> _users = new();
         
         public MainWindow()
         {
