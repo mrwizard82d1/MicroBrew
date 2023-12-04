@@ -1,0 +1,28 @@
+﻿<Window x:Class="DataContextSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="130" Width="280">
+    <StackPanel>
+        <WrapPanel>
+           <TextBlock Text="Window title: "/> 
+           <!-- The text property of the following control is bound to the `Window` title. -->
+           <!-- The current text of this file **does not** allow one to make this determination; -->
+           <!-- this determination relies on setting the `DataContext` property in the code-behind file. -->
+           <!-- Because the code-behind sets the (built-in) `DataContext` property to `this`, all -->
+           <!-- unqualified `Binding` references will be relative to `this` (this Window). -->
+           <TextBox Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}"
+                    Width="150" /> 
+        </WrapPanel>
+        <WrapPanel>
+           <TextBlock Text="Window dimensions: "/> 
+           <TextBox Text="{Binding Width}"
+                      Width="50" /> 
+           <TextBlock Text=" x "/>
+           <TextBox Text="{Binding Height}"
+                      Width="50" /> 
+        </WrapPanel>
+    </StackPanel>
+</Window>
