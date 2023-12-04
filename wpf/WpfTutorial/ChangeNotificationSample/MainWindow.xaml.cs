@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Windows;
 
 namespace ChangeNotificationSample
@@ -42,8 +43,33 @@ namespace ChangeNotificationSample
         }
     }
 
-    public class User
+    public class User : INotifyPropertyChanged
     {
-        public string Name { get; set; }
+        public event PropertyChangedEventHandler? PropertyChanged;
+        
+        private string _name;
+
+        public string Name
+        {
+            get => _name;
+            set
+            {
+                // ReSharper disable once InvertIf
+                if (_name != value)
+                {
+                    _name = value;
+                    NotifyPropertyChanged("Name");
+                }
+            }
+        }
+
+        private void NotifyPropertyChanged(string propName)
+        {
+            // ReSharper disable once UseNullPropagation
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propName));
+            }
+        }
     }
 }
